@@ -1,1 +1,1 @@
-THIS REPOSITORY IS OUT OF DATE - THE NEW ONE IS AT https://github.com/jezdez/django-avatar
+This fork is made for use with Askbot Q&A forum.
