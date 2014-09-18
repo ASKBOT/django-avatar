@@ -9,6 +9,7 @@ from django.utils.encoding import smart_str
 from django.db.models import signals
 
 from django.contrib.auth.models import User
+from unidecode import unidecode
 
 try:
     from cStringIO import StringIO
@@ -55,7 +56,7 @@ def avatar_file_path(instance=None, filename=None, size=None, ext=None):
     if size:
         tmppath.extend(['resized', str(size)])
     tmppath.append(os.path.basename(filename))
-    return os.path.join(*tmppath)
+    return unidecode(os.path.join(*tmppath))
 
 def find_extension(format):
     format = format.lower()
